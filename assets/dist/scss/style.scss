@@ -1,0 +1,188 @@
+@import "libs/fonts";
+@import "libs/footer";
+@import "libs/header";
+@import 'libs/normalize.scss';
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    outline: none;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+  ul,ol{
+    margin: 0;
+  }
+  
+  img {
+    max-width: 100%;
+  }
+  
+  input[type="submit"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+  }
+  
+  ul li,ol li{
+    margin: 0;
+  }
+
+  .clearfix{
+    &:after {
+      content: " ";
+      visibility: hidden;
+      display: block;
+      font-size: 0;
+      clear: both;
+      height: 0;
+    }
+  }
+  body {
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    position: relative;
+  }
+
+input[type='number'] {
+  -moz-appearance:textfield;
+}
+
+button {
+  cursor: pointer;
+}
+.blue-button{
+  display: block;
+  width: 272px;
+  height: 56px;
+  line-height: 56px;
+  border: 2px solid #5f06b8;
+  color: #ffffff;
+  font-size: 18px;
+  text-align: center;
+  background: transparent;
+  box-shadow: 5px 5px 6px rgba(137, 60, 226, 0.62);
+  // background: url('../img/Rectangle_1.png') no-repeat;
+  // width: 276px;
+  // height: 60px;
+  position: relative;
+  z-index: 1;
+  transition: 0.7s;
+  span{
+    width: 2px;
+    height: 2px;
+    background-color: #ffffff;
+    position: absolute;
+    z-index: 5;
+  }
+  .top-left{
+    top: -2px;
+    left: -2px;
+  }
+  .top-right{
+    top: -2px;
+    right: -2px;
+  }
+  .bottom-left{
+    bottom: -2px;
+    left: -2px ;
+  }
+  .bottom-right{
+    bottom: -2px;
+    right: -2px;
+  }
+  // &:before{
+  //   box-shadow: 5px 5px 6px rgba(137, 60, 226, 0.62);
+  //   width: 100%;
+  //   height: 100%;
+  //   position: absolute;
+  //   left: 0;
+  //   top: 0;
+  //   content: '';
+  //   z-index: 5;
+  // }
+  &:after{
+    background: linear-gradient( #5f06b8 0%, #370880 100%);
+    width: 100%;
+    height: 0;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    transition: 0.7s;
+    z-index: -1;
+  }
+  &:hover{
+    box-shadow: none;
+    &:after{
+      opacity: 1;
+      height: 100%;
+    }
+  }
+}
+.container {
+  display: block;
+  width: 100%;
+  padding: 0 15px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow-x: hidden;
+}
+@media screen and (min-width: 768px){
+  .blue-button{
+    width: 190px;
+    &:before{
+      width: 190px;
+    }
+  }
+  .container {
+    width: 648px;
+    padding: 0;
+  }
+}
+@media screen and (min-width: 1024px){
+  .container {
+    width: 864px;
+  }
+}
+@media (min-width: 1280px) {
+  .container {
+    width: 1080px;
+  }
+}
+@media screen and (min-width: 1400px){
+  .container {
+    width: 1280px;
+  }
+}
+@media screen and (min-width: 1600px){
+  .container {
+    width: 1350px;
+  }
+}
+
+::-webkit-scrollbar {height: 3px; width: 3px;}
+::-webkit-scrollbar-track {  background-color: #f5f4f6;}
+::-webkit-scrollbar-thumb { height: auto; background-color: #471f7e; width: 50px;}

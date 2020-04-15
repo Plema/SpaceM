@@ -1,0 +1,16 @@
+{
+  "name": "BIRGISE",
+  "version": "1.0.0",
+  "authors": [
+    "ryukit <bigriseinc@gmail.com>"
+  ],
+  "description": "new project for BIRGISE",
+  "main": "main.js",
+  "moduleType": [
+    "amd"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    
+  }
+}

@@ -101,7 +101,6 @@ grunt.initConfig({
 						footer: '<%= fixturesPath %>/templates/footer.html',
 						popUp: '<%= fixturesPath %>/templates/popUp.html',
 						mobAnim: '<%= fixturesPath %>/templates/mob-anim.html',
-						descAnim: '<%= fixturesPath %>/templates/desc-anim.html',
 					}
                 },
             }

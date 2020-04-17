@@ -1,8 +1,4 @@
-var init = function(){
-    // var isMobile = navigator.userAgent &&
-    //   navigator.userAgent.toLowerCase().indexOf('mobile') >= 0;
-    // var isSmall = window.innerWidth < 1000;
-    
+var init = function(){    
     var ps = new ParticleSlider({
       ptlGap: 0,
       ptlSize: 1,
@@ -15,7 +11,7 @@ var init = function(){
     (window.addEventListener
      ? window.addEventListener('click', function(){ps.init(true)}, false)
      : window.onclick = function(){ps.init(true)});
-  }
+}
   
   var initParticleSlider = function(){
     var psScript = document.createElement('script');

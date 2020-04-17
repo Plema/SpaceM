@@ -2,13 +2,15 @@ $(document).ready(function(){
 
   if (screen.width >= 1024){
     $("#fullpage").fullpage({
-      menu:'#menu',
-      scrollBar:true,
-      navigation:true,
-      navigationPosition:'left',
-      slidesNavPosition:'top',
+        menu:'#menu',
+        scrollBar:true,
+        navigation:true,
+        navigationPosition:'left',
+        slidesNavPosition:'top',
+        scrollHorizontally: false
       });
-    
+      
+
     $("#fp-nav > ul li").each(function(){
       var txt = $(this).text();
       console.log(txt);

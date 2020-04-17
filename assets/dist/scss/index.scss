@@ -336,7 +336,6 @@ main{
             position: relative;
             max-width: 120px;
             margin-bottom: 30px;
-            // z-index: 2;
             &:before{
                 position: absolute;
                 left: 0;
@@ -346,6 +345,7 @@ main{
                 background: url('../img/ellipse.png') no-repeat;
                 content: '';
                 z-index: 1;
+                background-size: contain;
             }
             img{
                 max-width: 52px;
@@ -960,10 +960,30 @@ main{
     .draw{
         margin-left: -60px;
     }
+    .smart-contact{
+        .four-smart{
+            justify-content: space-around;
+            align-items: flex-start;
+        }
+    }
 }
 @media screen and (min-width: 550px){
     .draw{
         margin-left: -80px;
+    }
+    .what-is-it{
+        &:before{
+            background-position: 12% 90%;
+        }
+    }
+    .any-deal{
+        &:before{
+            top: 0;
+            background: url('../img/any-back-desc.png') no-repeat ;
+            background-position: 100% 0%;
+            opacity: 0.4;
+            filter: blur(3px);
+        }
     }
 }
 @media screen and (min-width: 630px){
@@ -977,6 +997,53 @@ main{
             }
         }
     }
+    .smart-contact{
+        padding-bottom: 100px;
+        padding-top: 100px;
+        .four-smart{
+            max-width: 850px;
+            margin: 0 auto;
+            position: relative;
+            align-items: stretch;
+            &:before{
+                position: absolute;
+                width: 100%;
+                height: 1px;
+                background: #3d0b7b;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                content: '';
+            }
+            &:after{
+                position: absolute;
+                height: 100%;
+                width: 1px;
+                background: #3d0b7b;
+                left: 0;
+                right: 0;
+                margin: auto;
+                content: '';
+            }
+            .one-smart{
+                padding-bottom: 20px;
+                margin-bottom: 10px;
+                min-height: 305px;
+                padding-top: 50px;
+                &:nth-child(even){
+                    padding-left: 20px;
+                }
+                max-width: 50%;
+                width: 100%;
+                h6{
+                    max-width: 295px;
+                }
+                p{
+                    max-width: 295px;
+                }
+            }
+        }
+    }
 }
 @media screen and (min-width: 768px){
     .draw{
@@ -985,7 +1052,6 @@ main{
     .top-banner{
         .center-block{
             flex-direction: row;
-            // margin-bottom: 220px;
             h2{
                 font-size: 80px;
             }
@@ -1074,6 +1140,38 @@ main{
             background: url('../img/planeta.png') no-repeat;
             background-size: contain;
         }
+        .all-deal{
+            .one-deal{
+                margin-bottom: 50px;
+            }
+        }
+    }
+    .smart-contact{
+        position: relative;
+        &:before{
+            content: '';
+            position: absolute;
+            width: 100%;
+            max-width: 913px;
+            height: 100%;
+            background: url('../img/smart-left-desc.png') no-repeat;
+            background-size: cover;
+            background-position: 100% 100%;
+            opacity: 0.45;
+            top: 0;
+            left: 0;
+            max-height: 849px;
+        }
+        h4{
+            font-size: 36px;
+        }
+        .four-smart{
+            .one-smart{
+                &:nth-child(even){
+                    padding-left: 50px;
+                }
+            }
+        }
     }
 }
 @media screen and (min-width: 900px){
@@ -1103,7 +1201,18 @@ main{
             .title-any{
                 width: auto;
             }
-            .go-right{
+            .one-deal{
+                z-index: 5;
+                max-width: 200px;
+                width: 100%;
+                img{
+                    margin-left: 37px;
+                }
+                h6{
+                    font-size: 18px;
+                }
+            }
+            .go-right-title{
                 position: relative;
                 margin-right: 70px;
                 &:after{
@@ -1113,7 +1222,57 @@ main{
                     position: absolute;
                     content: '';
                     top: 50px;
-                    left: 115%;
+                    left: 256px;
+                }
+            }
+            .go-right{
+                position: relative;
+                margin-right: 70px;
+                &:after{
+                    width: 164px;
+                    height: 1px;
+                    background: #6e2dd8;
+                    position: absolute;
+                    content: '';
+                    top: 50px;
+                    left: 135px;
+                }
+            }
+            .go-last{
+                margin-right: 0px;
+            }
+            .text{
+                p{
+                    font-size: 18px;
+                    line-height: 27px;
+                }
+            }
+        }
+    }
+    .smart-contact{
+        .four-smart{
+            .one-smart{
+                &:nth-child(even){
+                    padding-left: 80px;
+                }
+                h6{
+                    font-size: 18px;
+                }
+                p{
+                    font-size: 18px;
+                }
+                .image{
+                    padding-top: 60px;
+                    padding-left: 50px;
+                    &:before{
+                        width: 195px;
+                        height: 145px;
+                        background-position: contain;
+                    }
+                    img{
+                        max-width: 98px;
+                        width: 100%;
+                    }
                 }
             }
         }
@@ -1127,6 +1286,62 @@ main{
 @media screen and (min-width: 1250px){
     .draw{
         margin-left: -230px;
+    }
+}
+@media screen and (min-width: 1280px){
+    .any-deal{
+        &:before{
+            background-position: 40% 10%;
+        }
+        .all-deal{
+            justify-content: flex-end;
+            .title-any{
+                max-width: 370px;
+                padding-top: 10px;
+                h3{
+                    width: auto;
+                    max-width: 100%;
+                    font-size: 30px;
+                    span{
+                        font-size: 36px;
+                    }
+                }
+                .line{
+                    width: 343px;
+                }
+            }
+            .one-deal{
+                padding-top: 60px;
+                max-width: 230px;
+                &:before{
+                    width: 164px;
+                    height: 130px;
+                }
+                img{
+                    max-width: 63px;
+                    margin-left: 50px;
+                    width: 100%;
+                }
+                h6{
+                    padding-left: 30px;
+                }
+            }
+            .go-right{
+                margin-right: 80px;
+                &:after{
+                    top: 65px;
+                    left: 155px;
+                }
+            }
+            .go-right-title{
+                margin-right: 155px;
+                &:after{
+                    left: 365px;
+                    width: 164px;
+                    top: 65px;
+                }
+            }
+        }
     }
 }
 @media screen and (min-width: 1350px){
@@ -1157,11 +1372,23 @@ main{
         }
     }
     .what-is-it{
-        // height: 100vh;
         overflow-y: hidden;
     }
     .any-deal{
-        // height: 100vh;
+        padding-top: 150px;
+        padding-bottom: 150px;
+        .all-deal{
+            justify-content: flex-start;
+            .go-right-title{
+                margin-right: 250px;
+                &:after{
+                    left: 405px;
+                }
+            }
+            .text{
+                max-width: 380px;
+            }
+        }
     }
 }
 @media screen and (min-width: 1600px){

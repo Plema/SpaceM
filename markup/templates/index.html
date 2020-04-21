@@ -11,7 +11,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/fontello.css">
     <link rel="stylesheet" href="../css/slick.css">
-    <link rel="stylesheet" href="../css/fullpage.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/index.css">
 </head>
@@ -22,7 +21,41 @@
     </header>
 
     <main>
-        <section class="top-banner section" id="top-banner">
+        <ul id="fp-nav" class="scrolling">
+            <li class="act-li">
+                <a href="#top-banner"></a>
+                <p>01</p>
+            </li>
+            <li>
+                <a href="#what-is-it"></a>
+                <p>02</p>
+            </li>
+            <li>
+                <a href="#any-deal"></a>
+                <p>03</p>
+            </li>
+            <li>
+                <a href="#smart-contact"></a>
+                <p>04</p>
+            </li>
+            <li>
+                <a href="#capabilities"></a>
+                <p>05</p>
+            </li>
+            <li>
+                <a href="#review"></a>
+                <p>06</p>
+            </li>
+            <li>
+                <a href="#plan"></a>
+                <p>07</p>
+            </li>
+            <li>
+                <a href="#last-section"></a>
+                <p>08</p>
+            </li>
+        </ul>
+        <section class="top-banner" id="top-banner">
             <div class="container">
                 <div class="header">
                     <a href="index.html" class="logo">LOGO</a>
@@ -139,7 +172,7 @@
                 </div>
             </div>
         </section>
-        <section class="any-deal section" id="any-deal">
+        <section class="any-deal" id="any-deal">
             <div class="container">
                 <div class="all-deal">
                     <div class="title-any go-right-title">
@@ -173,7 +206,7 @@
                 </div>
             </div>
         </section>
-        <section class="smart-contact section" id="smart-contact">
+        <section class="smart-contact" id="smart-contact">
             <div class="container">
                 <h4 class="desc">Сложности в смарт контрактах</h4>
                 <div class="four-smart">
@@ -208,40 +241,52 @@
                 </div>
             </div>
         </section>
-        <section class="capabilities section" id="capabilities">
+        <section class="capabilities" id="capabilities">
             <div class="container">
                 <h4>Возможности SpaceM</h4>
                 <div class="four-capab">
-                    <div class="one-capab bottom-right">
-                        <img src="../img/capab1.png" alt="">
-                        <p>Удобный и надежный способ наблюдать за Смарт контрактами.
-                        </p>
+                    <div class="one-c">
+                        <div class="one-capab bottom-right">
+                            <img src="../img/capab1.png" alt="">
+                            <p>Удобный и надежный способ наблюдать за Смарт контрактами.
+                            </p>
+                        </div>
                     </div>
-                    <div class="one-capab bottom-left">
-                        <img src="../img/capab2.png" alt="">
-                        <p>Быстрое и надежное отслеживание без использования приватных ключей.
-                        </p>
+                    <div class="one-c">
+                        <div class="one-capab bottom-left top-1">
+                            <img src="../img/capab2.png" alt="">
+                            <p>Быстрое и надежное отслеживание без использования приватных ключей.
+                            </p>
+                        </div>
                     </div>
-                    <div class="one-capab bottom-left">
-                        <img src="../img/capab3.png" alt="">
-                        <p>Контроль своих данных.</p>
+                    <div class="one-c">
+                        <div class="one-capab bottom-left top-2">
+                            <img src="../img/capab3.png" alt="">
+                            <p>Контроль своих данных.</p>
+                        </div>
                     </div>
-                    <div class="one-capab top-right">
-                        <img src="../img/capab4.png" alt="">
-                        <p>Timer Смарт контракта VOMER - вся информация в одном месте с перспективой развития переводов.</p>
+                    <div class="one-c-2">
+                        <div class="one-capab top-right bot-line">
+                            <img src="../img/capab4.png" alt="">
+                            <p>Timer Смарт контракта VOMER - вся информация в одном месте с перспективой развития переводов.</p>
+                        </div>
                     </div>
-                    <div class="one-capab top-left">
-                        <img src="../img/capab5.png" alt="">
-                        <p>Возможность сделать рекламную рассылку на все кошельки мира.</p>
+                    <div class="one-c-2">
+                        <div class="one-capab top-left top-1  bot-line">
+                            <img src="../img/capab5.png" alt="">
+                            <p>Возможность сделать рекламную рассылку на все кошельки мира.</p>
+                        </div>
                     </div>
-                    <div class="one-capab top-left">
-                        <img src="../img/capab6.png" alt="">
-                        <p>Статистика работы в одном месте. Эффективность и поддержка ERC20, отображение REWARD в Смарт контракте.</p>
+                    <div class="one-c-2">
+                        <div class="one-capab top-left top-2  bot-line">
+                            <img src="../img/capab6.png" alt="">
+                            <p>Статистика работы в одном месте. Эффективность и поддержка ERC20, отображение REWARD в Смарт контракте.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="review section" id="review">
+        <section class="review" id="review">
             <div class="container">
                 <h4>Отзывы</h4>
                 <div class="all-reviews">
@@ -258,7 +303,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="one-review">
+                    <div class="one-review top-m">
                         <div class="photo">
                             <img src="../img/man.png" alt="">
                         </div>
@@ -284,41 +329,47 @@
                             </div>
                         </div>
                     </div>
-                    <div class="one-review">
-                        <div class="photo">
-                            <img src="../img/man.png" alt="">
-                        </div>
-                        <div class="all-text">
-                            <div class="name-info">
-                                <div class="concret">
-                                    <h6>Иван Иванов</h6>
-                                    <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. </p>
+                    <div class="one-r">
+                        <div class="one-review">
+                            <div class="photo">
+                                <img src="../img/man.png" alt="">
+                            </div>
+                            <div class="all-text">
+                                <div class="name-info">
+                                    <div class="concret">
+                                        <h6>Иван Иванов</h6>
+                                        <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="one-review">
-                        <div class="photo">
-                            <img src="../img/man.png" alt="">
-                        </div>
-                        <div class="all-text">
-                            <div class="name-info">
-                                <div class="concret">
-                                    <h6>Иван Иванов</h6>
-                                    <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. </p>
+                    <div class="one-r">
+                        <div class="one-review top-m">
+                            <div class="photo">
+                                <img src="../img/man.png" alt="">
+                            </div>
+                            <div class="all-text">
+                                <div class="name-info">
+                                    <div class="concret">
+                                        <h6>Иван Иванов</h6>
+                                        <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="one-review">
-                        <div class="photo">
-                            <img src="../img/man.png" alt="">
-                        </div>
-                        <div class="all-text">
-                            <div class="name-info">
-                                <div class="concret">
-                                    <h6>Иван Иванов</h6>
-                                    <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. </p>
+                    <div class="one-r">
+                        <div class="one-review">
+                            <div class="photo">
+                                <img src="../img/man.png" alt="">
+                            </div>
+                            <div class="all-text">
+                                <div class="name-info">
+                                    <div class="concret">
+                                        <h6>Иван Иванов</h6>
+                                        <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -326,7 +377,7 @@
                 </div>
             </div>
         </section>
-        <section class="plan section" id="plan">
+        <section class="plan" id="plan">
             <div class="container">
                 <h4>План разработки</h4>
                 <div class="three-steps">
@@ -361,7 +412,7 @@
                 </div>
             </div>
         </section>
-        <div class="last-section section" id="last-section">
+        <section class="last-section section" id="last-section">
             <div class="container">
                 <div class="strange-circle">
                     <img src="../img/strange-circle.png" alt="">
@@ -371,24 +422,34 @@
                     </div>
                 </div>
                 <div class="all-sect">
-                    <div class="phone-slider">
-                        <div>
-                            <img src="../img/phone1.png" alt="">
-                        </div>
-                        <div>
-                            <img src="../img/phone2.png" alt="">
-                        </div>
-                        <div>
-                            <img src="../img/phone3.png" alt="">
-                        </div>
-                        <div>
-                            <img src="../img/phone4.png" alt="">
-                        </div>
-                        <div>
-                            <img src="../img/phone5.png" alt="">
-                        </div>
-                        <div>
-                            <img src="../img/phone6.png" alt="">
+                    <div class="all-sl">
+                        <li class="slick-arrow2 slick-prev2">
+                            <img src="../img/arrow-orange.png" alt="" class="or">
+                            <img src="../img/arrow-white.png" alt="" class="wh">
+                        </li>
+                        <li class="slick-arrow2 slick-next2">
+                            <img src="../img/arrow-orange.png" alt="" class="or">
+                            <img src="../img/arrow-white.png" alt="" class="wh">
+                        </li>
+                        <div class="phone-slider">
+                            <div>
+                                <img src="../img/phone1.png" alt="">
+                            </div>
+                            <div>
+                                <img src="../img/phone2.png" alt="">
+                            </div>
+                            <div>
+                                <img src="../img/phone3.png" alt="">
+                            </div>
+                            <div>
+                                <img src="../img/phone4.png" alt="">
+                            </div>
+                            <div>
+                                <img src="../img/phone5.png" alt="">
+                            </div>
+                            <div>
+                                <img src="../img/phone6.png" alt="">
+                            </div>
                         </div>
                     </div>
                     <div class="right-form">
@@ -424,18 +485,29 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     </main>
 
     <footer>
 
     </footer>
 
+    <div class="background-dark"></div>
 
+    <div class="popUp ">
+        <img src="../img/close.png" alt="" class="close-pop">
+        <div class="call">
+            <h5>Заказать обратный звонок</h5>
+            <form>
+                <input type="text" placeholder="Ваше имя" required id="name">
+                <input type="number" placeholder="Ваш телефон" required id="phone">
+                <button class="blue-button send">Отправить</button>
+            </form>
+        </div>
+    </div>
 
     <script src="../js/jquery.min.js"></script>
-    <script src="../js/slick.min.js"></script>
-    <script src="../js/fullpage.min.js"></script>
+    <script defer src="../js/slick.min.js"> </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.5/dat.gui.min.js"></script>
     <script src="../js/script.min.js"></script>
     <script src="../js/main.min.js"></script>

@@ -13,6 +13,7 @@
     outline: none;
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
     font-weight: 400;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -63,6 +64,8 @@ input::-webkit-inner-spin-button {
     font-family: 'Roboto', sans-serif;
     width: 100%;
     position: relative;
+    transition: 0.5s;
+    opacity: 0;
   }
 
 input[type='number'] {
@@ -83,9 +86,6 @@ button {
   text-align: center;
   background: transparent;
   box-shadow: 5px 5px 6px rgba(137, 60, 226, 0.62);
-  // background: url('../img/Rectangle_1.png') no-repeat;
-  // width: 276px;
-  // height: 60px;
   position: relative;
   z-index: 1;
   transition: 0.7s;
@@ -112,16 +112,6 @@ button {
     bottom: -2px;
     right: -2px;
   }
-  // &:before{
-  //   box-shadow: 5px 5px 6px rgba(137, 60, 226, 0.62);
-  //   width: 100%;
-  //   height: 100%;
-  //   position: absolute;
-  //   left: 0;
-  //   top: 0;
-  //   content: '';
-  //   z-index: 5;
-  // }
   &:after{
     background: linear-gradient( #5f06b8 0%, #370880 100%);
     width: 100%;
@@ -143,61 +133,84 @@ button {
   }
 }
 #fp-nav{
-  ul{
-    li{
-      &:hover{
-        a{
-          span{
-            width: 13px;
-            height: 2px;
-            background-color: #ffffff;
-            border: none;
-            border-radius: 0;
-            margin: 0 ;
-            transition: 0.7s;
-          }
-        }
-      }
-      a{
-        display: flex;
-        align-items: center;
-        span{
-          width: 13px;
-          height: 2px;
-          background-color: #6340b4;
-          border: none;
-          border-radius: 0;
-          margin: 0 ;
-          transition: 0.7s;
-        }
-        .num{
+  display: none;
+}
+.background-dark{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow-y: hidden;
+  top: 0;
+  left: 0;
+  background: #ffffff;
+  opacity: 0;
+  transition: 0.65s;
+  z-index: -1;
+}
+.open-back{
+  z-index: 500;
+  opacity: 0.5;
+}
+.popUp{
+  max-width: 290px;
+  transition: 0.6s;
+  -webkit-box-shadow: 0px 0px 20px 0px rgba(33,10,53,0.73);
+  -moz-box-shadow: 0px 0px 20px 0px rgba(33,10,53,0.73);
+  box-shadow: 0px 0px 20px 0px rgba(33,10,53,0.73);
+  opacity: 0;
+  width: 100%;
+  z-index: -1;
+  position: fixed;
+  top: 50%;
+  transform: translate(0, -50%);
+  left: 0;
+  right: 0;
+  margin: auto;
+  background: #210A35;
+  padding: 50px 25px;
+  img{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    max-width: 40px;
+  }
+  .call{
+    h5{
+      font-size: 25px;
+      margin-bottom: 25px;
+      color: #ffffff;
+      text-align: center;
+    }
+    form{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      input{
+        height: 50px;
+        width: 260px;
+        color: #ffffff;
+        font-size: 16px;
+        padding: 5px 15px;
+        margin-bottom: 20px;
+        display: block;
+        background: transparent;
+        border: 2px solid #5f06b8;
+        &::placeholder{
           color: #ffffff;
-          font-size: 16px;
-          font-weight: 400;
-          // display: none;
-          z-index: -1;
-          position: relative;
-          margin-left: 40px;
-          transition: 0.7s;
-          opacity: 0;
         }
       }
-      .active{
-        .num{
-          // display: block;
-          opacity: 1;
-          z-index: 1;
-        }
-        span{
-          width: 21px !important;
-          height: 2px !important;
-          background-color: #ffffff !important;
-          border-radius: 0 !important;
-          margin: 0 !important;
-        }
+      .blue-button{
+        width: 260px;
+        margin-top: 15px;
       }
     }
   }
+}
+.open-pop{
+  z-index: 505;
+  opacity: 1;
 }
 .container {
   display: block;
@@ -206,7 +219,6 @@ button {
   margin-left: auto;
   margin-right: auto;
   overflow-x: hidden;
-  overflow-y: hidden;
 }
 @media screen and (min-width: 768px){
   .blue-button{
@@ -219,10 +231,91 @@ button {
     width: 648px;
     padding: 0;
   }
+  .popUp{
+    max-width: 610px;
+    padding-top: 35px;
+    img{
+      max-width: 55px;
+      top: 15px;
+      right: 15px;
+    }
+    .call{
+      h5{
+        font-size: 32px;
+        margin-bottom: 45px;
+      }
+      form{
+        input{
+          width: 400px;
+          margin-bottom: 25px;
+          height: 56px;
+          font-size: 18px;
+          padding: 5px 20px;
+        }
+        .blue-button{
+          width: 190px;
+        }
+      }
+    }
+  }
 }
 @media screen and (min-width: 1024px){
   .container {
     width: 864px;
+  }
+  #fp-nav{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 50%;
+    transform: translate(0, -50%);
+    z-index: 150;
+    left: 10px;
+    li{
+      transition: 0.5s;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      position: relative;
+      &:not(last-of-type){
+        margin-bottom: 19px;
+      }
+      a{
+        width: 13px;
+        height: 2px;
+        background-color: #6340b4;
+        cursor: pointer;
+        margin-right: 10px;
+        transition: 0.5s;
+        &:hover{
+          background: #ffffff;
+        }
+      }
+      p{
+        position: absolute;
+        top: -7px;
+        bottom: 0;
+        margin: auto;
+        left: 35px;
+        opacity: 0;
+        font-size: 16px;
+        transform: scale(0);
+        color: #ffffff;
+        transition: 0.5s;
+      }
+    }
+    .act-li{
+      a{
+        width: 21px;
+        background-color: #ffffff;
+      }
+      p{
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
   }
 }
 @media (min-width: 1280px) {
@@ -238,6 +331,9 @@ button {
 @media screen and (min-width: 1600px){
   .container {
     width: 1350px;
+  }
+  #fp-nav{
+    left: 250px;
   }
 }
 

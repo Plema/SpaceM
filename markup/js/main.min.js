@@ -31,6 +31,7 @@ $(document).ready(function(){
       $('.popUp').addClass('open-pop');
       $('body').css('overflow-y','hidden');
       $('.background-dark').addClass('open-back');
+      $('nav').removeClass('open-nav');
     })
 
 
@@ -45,6 +46,8 @@ $(document).ready(function(){
       $('body').css('overflow-y','visible');
       $('.background-dark').removeClass('open-back');
       $('.popUp').removeClass('open-pop');
+      $('.hamburger-menu').removeClass('animate');
+      $('nav').removeClass('open-nav');
     })
 
 
@@ -62,6 +65,29 @@ $(document).ready(function(){
         $('.popUp').removeClass('open-pop');
         alert('Заявка успешно отправлена');
       }
+    });
+
+    $('.menu-wrapper').on('click', function() {
+      if($('nav').is('.open-nav')){
+        $('.hamburger-menu').removeClass('animate');
+        $('body').css('overflow-y','visible');
+        $('.background-dark').removeClass('open-back');
+        $('nav').removeClass('open-nav');
+      }
+      else{
+        $('.menu-wrapper').addClass('close-menu')
+        $('.hamburger-menu').addClass('animate');
+        $('body').css('overflow-y','hidden');
+        $('.background-dark').addClass('open-back');
+        $('nav').addClass('open-nav'); 
+      }
+    });
+
+
+    $('nav > ul > li > a').on('click', function(){
+      $('body').css('overflow-y','visible');
+      $('.background-dark').removeClass('open-back');
+      $('nav').removeClass('open-nav'); 
     });
 
 
